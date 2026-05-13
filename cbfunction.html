@@ -11,21 +11,51 @@
 //  Q1
 
 function orderFood (foodname,callback){
-     console.log("Preparing" + foodname)
+     console.log("Preparing " + foodname)
 
-     return(foodname)
-
-
-}
-
-function delevered(foodname){
-          console.log(foodname + delevered)
+callback(foodname)
 
 }
 
-orderFood(pizza);
+function delivered(foodname){
+          console.log(foodname + "Deliverd")
+
+}
+
+orderFood("Pizaa", delivered);
 
 
+
+function login(username,callback){
+    if(username === "Akash"){
+        console.log("user is login")
+    }else{
+        console.log("Invalid user")
+    }
+    callback()
+}
+
+function dashboard(){
+    console.log("welcome to dashboard")
+}
+login("Akash",dashboard)
+
+
+function checkmarks(marks,passCallback,failCallback){
+    if( marks>=35){
+        passCallback()
+    }else{
+        failCallback()
+    }
+}
+function pass(){
+    console.log("Student is Passed")
+}
+
+function fail(){
+    console.log("Student is fail")
+}
+ checkmarks(36,pass,fail)
     </script>
 </body>
 </html>
